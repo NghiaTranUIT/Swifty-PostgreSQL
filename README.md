@@ -4,7 +4,7 @@
   
 <p align="center">
   <a href="http://nghiatran.me">Mad lab</a> &bull;
-  <a>Titan</a> &bull;
+  <a href="https://github.com/NghiaTranUIT/Titan-Postgresql">Titan</a> &bull;
   <b>Swifty PostgreSQL</b> &bull;
   <a href="https://github.com/NghiaTranUIT/FeSpinner">FeSpinner</a>
   <br> &nbsp;
