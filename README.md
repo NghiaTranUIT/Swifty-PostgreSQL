@@ -12,7 +12,7 @@
   <a href="https://github.com/NghiaTranUIT/FeSlideFilter">FeSlideFilter</a>
 </p>
 
-Swifty-PostgreSQL
+Swifty PostgreSQL
 ------------
   
 Swifty-PostgreSQL driver, written by Swift 3.0, and using in TitanKit
@@ -26,17 +26,18 @@ Roadmap
 
 - [x] Sketch
 - [x] Base Foundation (50%)
-- [ ] Fully Common PostgreSQL 
+- [ ] Fully Common PostgreSQL
+- [ ] Prefix searching - implement by Prefix Tree
 - [ ] Smart Query
 - [ ] Write Test 
 
 Documentation
 ------------
-(in list)
+(in working list)
 
 Run Test
 ------------
-(Progessing)
+(Progessing)  
 Will implement Docker for testing purpose. Currently, The test only passed in my laptop.
 
 Contact
