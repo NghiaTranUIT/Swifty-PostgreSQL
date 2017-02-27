@@ -9,7 +9,7 @@
   <a href="https://github.com/NghiaTranUIT/FeSpinner">FeSpinner</a>
   <br> &nbsp;
   <a href="https://github.com/NghiaTranUIT/iOS-Awesome-Starter-Kit/edit/master/README.md">iOS Awesome Starter Kit</a> &bull;
-  <a href="https://github.com/NghiaTranUIT/FeSlideFilter">FeSlideFilter</a> &bull;
+  <a href="https://github.com/NghiaTranUIT/FeSlideFilter">FeSlideFilter</a>
 </p>
 
 Swifty-PostgreSQL
@@ -30,6 +30,14 @@ Roadmap
 - [ ] Smart Query
 - [ ] Write Test 
 
+Documentation
+------------
+(in list)
+
+Run Test
+------------
+(Progessing)
+Will implement Docker for testing purpose. Currently, The test only passed in my laptop.
 
 Contact
 ------------
