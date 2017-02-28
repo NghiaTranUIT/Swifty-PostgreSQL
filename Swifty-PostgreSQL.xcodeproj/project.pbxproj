@@ -594,6 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe.swifty.postgresql;
 				PRODUCT_NAME = SwiftyPostgreSQL;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -624,6 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe.swifty.postgresql;
 				PRODUCT_NAME = SwiftyPostgreSQL;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
