@@ -18,6 +18,7 @@ Swifty PostgreSQL
 Swifty-PostgreSQL driver, written by Swift 3.0, and using in TitanKit
   
 ![](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![License](https://img.shields.io/npm/l/express.svg?style=flat)
 ![Platform](https://img.shields.io/badge/platform-osx-green.svg?style=flat)
 
