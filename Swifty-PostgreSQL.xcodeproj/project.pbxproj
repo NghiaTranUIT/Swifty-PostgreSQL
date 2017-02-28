@@ -37,6 +37,7 @@
 		BAEE57631E48349A00EC61E7 /* ColumnTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */; };
 		BAF1A4ED1E651A9200D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
 		BAF1A4EE1E651ACC00D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
+		BAF1A51C1E65275D00D1C87D /* libpq.framework in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF1A51C1E65275D00D1C87D /* libpq.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
