@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.name         = "SwiftyPostgreSQL"
   s.version      = "0.1.0"
   s.summary      = "Swifty-PostgreSQL driver on macOS, written by Swift 3.0."
-  s.license = 'MIT'
+  s.license = { :type => "MIT", :file => "LICENSE" }
   s.homepage = 'http://nghiatran.me'
   s.social_media_url = 'http://nghiatran.me'
   s.author             = { "Nghia Tran" => "vinhnghiatran@gmail.com" }
@@ -26,7 +26,8 @@ Pod::Spec.new do |s|
 
   s.platform = :osx
   s.osx.deployment_target = '10.12'
-  
+
   s.source_files = 'Source/*.swift'
+  s.frameworks = 'libpq'
 
 end
