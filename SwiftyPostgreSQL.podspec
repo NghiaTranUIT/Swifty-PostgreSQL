@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/*', 'Framework/*', 'Source/libpq.framework'
   s.frameworks = 'libpq'
+  s.libraries = 'pq'
   s.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Source/libpq.framework'}
-
 end
