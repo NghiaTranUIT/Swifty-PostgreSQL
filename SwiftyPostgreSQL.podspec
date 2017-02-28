@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.platform = :osx
   s.osx.deployment_target = '10.12'
 
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/*', 'Framework/*'
   s.frameworks = 'libpq'
 
 end

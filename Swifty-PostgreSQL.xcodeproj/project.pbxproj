@@ -17,8 +17,6 @@
 		BA1999E81DDC412D00296441 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999E71DDC412D00296441 /* Parameter.swift */; };
 		BA1999EA1DDC508000296441 /* ResultStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999E91DDC508000296441 /* ResultStatus.swift */; };
 		BA1999EC1DDC673400296441 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999EB1DDC673400296441 /* Row.swift */; };
-		BA2E3BE41E646C7A00FE7A2E /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2E3BE31E646C7A00FE7A2E /* libpq.framework */; };
-		BA2E3BE51E646C7A00FE7A2E /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2E3BE31E646C7A00FE7A2E /* libpq.framework */; };
 		BA8FB3121E473ABC004D48F5 /* UUID+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */; };
 		BAA8ED901DDB1967006E4E33 /* ConnectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */; };
 		BABDF8991E331B4F006603BA /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDF8981E331B4F006603BA /* Field.swift */; };
@@ -37,6 +35,8 @@
 		BACFCCC11DDAFD9F00EFB0BA /* ConnectionParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFCCC01DDAFD9F00EFB0BA /* ConnectionParam.swift */; };
 		BAEE57611E482F6100EC61E7 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57601E482F6100EC61E7 /* Column.swift */; };
 		BAEE57631E48349A00EC61E7 /* ColumnTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */; };
+		BAF1A4ED1E651A9200D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
+		BAF1A4EE1E651ACC00D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		BA1999E71DDC412D00296441 /* Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		BA1999E91DDC508000296441 /* ResultStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStatus.swift; sourceTree = "<group>"; };
 		BA1999EB1DDC673400296441 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		BA2E3BE31E646C7A00FE7A2E /* libpq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpq.framework; sourceTree = "<group>"; };
 		BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+Short.swift"; sourceTree = "<group>"; };
 		BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionResult.swift; sourceTree = "<group>"; };
 		BABDF8981E331B4F006603BA /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		BACFCCC01DDAFD9F00EFB0BA /* ConnectionParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionParam.swift; sourceTree = "<group>"; };
 		BAEE57601E482F6100EC61E7 /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnTypeProtocol.swift; sourceTree = "<group>"; };
+		BAF1A4EC1E651A9200D1C87D /* libpq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpq.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA2E3BE41E646C7A00FE7A2E /* libpq.framework in Frameworks */,
+				BAF1A4ED1E651A9200D1C87D /* libpq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACFCCAE1DDAF95800EFB0BA /* SwiftyPostgreSQL.framework in Frameworks */,
-				BA2E3BE51E646C7A00FE7A2E /* libpq.framework in Frameworks */,
+				BAF1A4EE1E651ACC00D1C87D /* libpq.framework in Frameworks */,
 				45871E24FEF39D2D4E87CC6D /* Pods_Swifty_PostgreSQLTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +196,6 @@
 		BACFCC871DDAF89400EFB0BA = {
 			isa = PBXGroup;
 			children = (
-				BACFCCA31DDAF92600EFB0BA /* Framework */,
 				CDB205A642EFDCA6A64E930A /* Frameworks */,
 				94D73FC7FD44C0BCBD5C9208 /* Pods */,
 				BACFCC921DDAF89400EFB0BA /* Products */,
@@ -224,17 +223,10 @@
 			path = "Swifty-PostgreSQL";
 			sourceTree = "<group>";
 		};
-		BACFCCA31DDAF92600EFB0BA /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				BA2E3BE31E646C7A00FE7A2E /* libpq.framework */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
 		BACFCCA41DDAF93600EFB0BA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BAF1A4EC1E651A9200D1C87D /* libpq.framework */,
 				BA0ACAF61E321954001AD35A /* Common */,
 				BA1999EE1DDC677900296441 /* Connection */,
 				BA0ACAF11E3216A4001AD35A /* Decode */,
@@ -592,6 +584,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Source",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Swifty-PostgreSQL/Info.plist";
@@ -621,6 +614,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Source",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Swifty-PostgreSQL/Info.plist";
@@ -647,6 +641,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Source",
 				);
 				INFOPLIST_FILE = "Swifty-PostgreSQLTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -670,6 +665,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)/Source",
 				);
 				INFOPLIST_FILE = "Swifty-PostgreSQLTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
