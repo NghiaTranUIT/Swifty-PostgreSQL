@@ -17,7 +17,8 @@ Swifty PostgreSQL
   
 Swifty-PostgreSQL driver, written by Swift 3.0, and using in TitanKit.   
 The Swifty warpper PostgreSQL's pointer and C functions, and handle allocate/dellocate memory automatically.   
-Offer ability to connect many database simultaneously, modeling all PostgreSQL's enum and constants.
+Offer ability to connect many database simultaneously, modeling all PostgreSQL's enum and constants.   
+   
 Field model adopt Presentable protocol, so you can get rawString or realData depend on kind of data eaiser, all expensive operations are lazy computed as well.   
 
 ![](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
