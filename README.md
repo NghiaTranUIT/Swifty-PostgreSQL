@@ -32,6 +32,11 @@ Roadmap
 - [ ] Smart Query
 - [ ] Write Test 
 
+Installtion 
+------------
+### Carthage
+`github "NghiaTranUIT/Swifty-PostgreSQL" ~> 0.1`
+
 Documentation
 ------------
 (in working list)
