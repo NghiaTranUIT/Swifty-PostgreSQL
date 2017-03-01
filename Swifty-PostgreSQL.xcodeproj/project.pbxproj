@@ -35,9 +35,6 @@
 		BACFCCC11DDAFD9F00EFB0BA /* ConnectionParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFCCC01DDAFD9F00EFB0BA /* ConnectionParam.swift */; };
 		BAEE57611E482F6100EC61E7 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57601E482F6100EC61E7 /* Column.swift */; };
 		BAEE57631E48349A00EC61E7 /* ColumnTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */; };
-		BAF1A4ED1E651A9200D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
-		BAF1A4EE1E651ACC00D1C87D /* libpq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
-		BAF1A51C1E65275D00D1C87D /* libpq.framework in Resources */ = {isa = PBXBuildFile; fileRef = BAF1A4EC1E651A9200D1C87D /* libpq.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +60,7 @@
 		BA1999E71DDC412D00296441 /* Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		BA1999E91DDC508000296441 /* ResultStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStatus.swift; sourceTree = "<group>"; };
 		BA1999EB1DDC673400296441 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		BA2E0C8F1E66AC92001F899C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+Short.swift"; sourceTree = "<group>"; };
 		BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionResult.swift; sourceTree = "<group>"; };
 		BABDF8981E331B4F006603BA /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 		BACFCCC01DDAFD9F00EFB0BA /* ConnectionParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionParam.swift; sourceTree = "<group>"; };
 		BAEE57601E482F6100EC61E7 /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnTypeProtocol.swift; sourceTree = "<group>"; };
-		BAF1A4EC1E651A9200D1C87D /* libpq.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpq.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF1A4ED1E651A9200D1C87D /* libpq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACFCCAE1DDAF95800EFB0BA /* SwiftyPostgreSQL.framework in Frameworks */,
-				BAF1A4EE1E651ACC00D1C87D /* libpq.framework in Frameworks */,
 				45871E24FEF39D2D4E87CC6D /* Pods_Swifty_PostgreSQLTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +189,14 @@
 			path = Query;
 			sourceTree = "<group>";
 		};
+		BA2E0C8E1E66AC87001F899C /* libpq */ = {
+			isa = PBXGroup;
+			children = (
+				BA2E0C8F1E66AC92001F899C /* module.modulemap */,
+			);
+			name = libpq;
+			sourceTree = "<group>";
+		};
 		BACFCC871DDAF89400EFB0BA = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +230,7 @@
 		BACFCCA41DDAF93600EFB0BA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1A4EC1E651A9200D1C87D /* libpq.framework */,
+				BA2E0C8E1E66AC87001F899C /* libpq */,
 				BA0ACAF61E321954001AD35A /* Common */,
 				BA1999EE1DDC677900296441 /* Connection */,
 				BA0ACAF11E3216A4001AD35A /* Decode */,
@@ -361,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF1A51C1E65275D00D1C87D /* libpq.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

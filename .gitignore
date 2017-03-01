@@ -67,3 +67,6 @@ fastlane/test_output
 
 # OS Files
 .DS_Store
+
+# Sketch
+Sketch/

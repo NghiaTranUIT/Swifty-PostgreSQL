@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BACFCCA81DDAF95800EFB0BA"
+               BuildableName = "Swifty-PostgreSQLTests.xctest"
+               BlueprintName = "Swifty-PostgreSQLTests"
+               ReferencedContainer = "container:Swifty-PostgreSQL.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BACFCC901DDAF89400EFB0BA"
+            BuildableName = "SwiftyPostgreSQL.framework"
+            BlueprintName = "Swifty-PostgreSQL"
+            ReferencedContainer = "container:Swifty-PostgreSQL.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
