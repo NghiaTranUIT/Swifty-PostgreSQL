@@ -21,44 +21,27 @@ open class Field: Presentable {
     
     /// Column
     fileprivate var _column: ColumnTypeProtocol!
-    public var column: ColumnTypeProtocol {
-        return _column
-    }
+    public var column: ColumnTypeProtocol { return _column }
     
     /// Real data
     fileprivate lazy var _realData: Any = self.parseRealData()
-    public var realData: Any {
-        get {
-            return self._realData
-        }
-    }
+    public var realData: Any { return self._realData }
     
     /// Raw data
     /// Intent for presentation in Field cell
     /// We use it to reduce hit performance. Only parse to real data if possible
-    fileprivate var _rawData: String = ""
+    fileprivate lazy var _rawData: String = self.parseRawData()
     public var rawData: String {
-        get {
-            if self.isNull {
-                return "NULL"
-            }
-            return self._rawData
-        }
+        return self._rawData
     }
     
     /// Determine if current value is <null>
     /// Store it as NSNull
     fileprivate var _isNull: Bool = false
-    public var isNull: Bool {
-        get {
-            return self._isNull
-        }
-    }
+    public var isNull: Bool { return self._isNull }
     
     /// Col type
-    public var colType: ColumnType {
-        return self.column.colType
-    }
+    public var colType: ColumnType { return self.column.colType }
     
     //
     // MARK: - Init
@@ -83,10 +66,6 @@ extension Field {
             self._isNull = true
             return
         }
-        
-        // Raw data
-        self._rawData = decoder.getRawData()
-        
     }
     
     fileprivate func parseRealData() -> Any {
@@ -103,6 +82,13 @@ extension Field {
     
     fileprivate func desctiptionValue() -> String {
         return "[\(self.rawData):\(self._column.colType)]"
+    }
+    
+    fileprivate func parseRawData() -> String {
+        if self.isNull {
+            return "NULL"
+        }
+        return decoder.getRawData()
     }
 }
 

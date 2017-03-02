@@ -38,8 +38,7 @@ public enum ColumnType: UInt32 {
         if newValue == .unsupport {
             Logger.error("Didn't support colType = \(rawValue)")
         }
-        
-        print("oid = \(rawValue) = \(newValue)")
+    
         return newValue
     }
 }
