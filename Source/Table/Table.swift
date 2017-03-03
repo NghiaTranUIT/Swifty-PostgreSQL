@@ -33,6 +33,10 @@ open class Table {
     
     //
     // MARK: - Variable
+    
+    // Connection
+    weak var connection: Connection?
+    
     /// Catolog name
     public let tableCatalog: String?
     
@@ -40,7 +44,7 @@ open class Table {
     public var tableSchema: TableSchema = TableSchema.none
     
     /// Table Name
-    public let tableName: String?
+    public let tableName: String!
     
     /// Table Type
     public var tableType: TableType = TableType.none
@@ -54,18 +58,27 @@ open class Table {
     /// ID
     public let id: String = UUID.shortUUID()
     
+    // Primary key
+    public var primaryKey: String {
+        return self.primaryColumn.colName
+    }
+    
+    // Primary Column
+    public lazy var primaryColumn: Column = self.getPrimaryColumn()
+    
     //
     // MARK: - Init
-    init(tableCatalog: String, tableSchema: String, tableName: String, tableType: String, isInsertableInto: Bool, isTyped: Bool) {
+    init(connection: Connection, tableCatalog: String, tableSchema: String, tableName: String, tableType: String, isInsertableInto: Bool, isTyped: Bool) {
         self.tableCatalog = tableCatalog
         self.tableSchema = TableSchema(rawValue: tableSchema) ?? TableSchema.none
         self.tableName = tableName
         self.tableType = TableType(rawValue: tableType) ?? TableType.none
         self.isInsertableInto = isInsertableInto
         self.isTyped = isTyped
+        self.connection = connection
     }
     
-    init(resultRow: Row) {
+    init(connection: Connection, resultRow: Row) {
         self.tableCatalog = resultRow.field(with: "table_catalog")!.rawData
         let schema = resultRow.field(with: "table_schema")!.rawData
         self.tableSchema = TableSchema(rawValue: schema) ?? TableSchema.none
@@ -78,6 +91,7 @@ open class Table {
         // Need to stupid compare and parsing to boolean
         self.isInsertableInto = (resultRow.field(with: "is_insertable_into")!.realData as? String) == "YES"
         self.isTyped = (resultRow.field(with: "is_typed")!.realData as? String) == "YES"
+        self.connection = connection
     }
 }
 
@@ -91,6 +105,20 @@ extension Table {
             debug += " name=\(tableName)"
         }
         return debug
+    }
+    
+    fileprivate func getPrimaryColumn() -> Column {
+        guard let connection = self.connection else {
+            fatalError("[getPrimaryColumn]: Connection was closed.")
+        }
+
+        // Query
+        let query = QueryFactory.queryGetPrimaryKey(with: self)
+        let result = connection.execute(query: query)
+        let column = result.columns.first!
+        let row = result.rows.first!
+        let primaryCol = Column(colName: row.field(with: column)!.rawData, colIndex: 0, colType: column.colType)
+        return primaryCol
     }
 }
 

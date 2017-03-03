@@ -71,6 +71,12 @@ open class QueryResult {
     }()
     
     //
+    // MARK: - Pagination
+    var isHaveNextPage: Bool {
+        return false
+    }
+    
+    //
     // MARK: - Init
     public init(_ resultPtr: OpaquePointer?) {
         self.resultPtr = resultPtr
