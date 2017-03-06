@@ -51,8 +51,8 @@ class TableSpec: QuickSpec {
                 it("Primary key", closure: {
                     
                     let primaryCol = userTable!.primaryColumn
-                    
                     expect(primaryCol.colName) == "id"
+                    expect(userTable.primaryKey) == "id"
                 })
             })
         }
