@@ -28,6 +28,11 @@ public enum ColumnType: UInt32 {
     case date = 1082
     case time = 1083
     case timestamp = 1114
+    case intArray = 1007
+    case charArray = 1015
+    case jsonArray = 199
+    case numeric = 1700
+    
     case unsupport = 0
     
     /// Build

@@ -89,6 +89,14 @@ extension Decoder: Decodable {
             return rawData
         case .text:
             return rawData
+        case .intArray:
+            return rawData
+        case .charArray:
+            return rawData
+        case .jsonArray:
+            return rawData
+        case .numeric:
+            return rawData
         }
         return value
     }

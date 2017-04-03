@@ -17,6 +17,9 @@
 		BA1999E81DDC412D00296441 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999E71DDC412D00296441 /* Parameter.swift */; };
 		BA1999EA1DDC508000296441 /* ResultStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999E91DDC508000296441 /* ResultStatus.swift */; };
 		BA1999EC1DDC673400296441 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999EB1DDC673400296441 /* Row.swift */; };
+		BA3F02CC1E6933C600D070AC /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CB1E6933C600D070AC /* PaginationQuery.swift */; };
+		BA3F02CE1E6934CF00D070AC /* QueryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CD1E6934CF00D070AC /* QueryFactory.swift */; };
+		BA3F02D01E6939B300D070AC /* TableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CF1E6939B300D070AC /* TableSpec.swift */; };
 		BA8FB3121E473ABC004D48F5 /* UUID+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */; };
 		BAA8ED901DDB1967006E4E33 /* ConnectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */; };
 		BABDF8991E331B4F006603BA /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDF8981E331B4F006603BA /* Field.swift */; };
@@ -63,6 +66,9 @@
 		BA1999E91DDC508000296441 /* ResultStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStatus.swift; sourceTree = "<group>"; };
 		BA1999EB1DDC673400296441 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		BA2E0C8F1E66AC92001F899C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		BA3F02CB1E6933C600D070AC /* PaginationQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationQuery.swift; sourceTree = "<group>"; };
+		BA3F02CD1E6934CF00D070AC /* QueryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryFactory.swift; sourceTree = "<group>"; };
+		BA3F02CF1E6939B300D070AC /* TableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSpec.swift; sourceTree = "<group>"; };
 		BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+Short.swift"; sourceTree = "<group>"; };
 		BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionResult.swift; sourceTree = "<group>"; };
 		BABDF8981E331B4F006603BA /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			children = (
 				BA0ACAF71E32195C001AD35A /* Logger.swift */,
 				BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */,
+				BA3F02CD1E6934CF00D070AC /* QueryFactory.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 			children = (
 				BA1999E71DDC412D00296441 /* Parameter.swift */,
 				BACFCCBA1DDAFAF600EFB0BA /* Query.swift */,
+				BA3F02CB1E6933C600D070AC /* PaginationQuery.swift */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -204,10 +212,10 @@
 		BACFCC871DDAF89400EFB0BA = {
 			isa = PBXGroup;
 			children = (
+				BACFCCA41DDAF93600EFB0BA /* Source */,
 				CDB205A642EFDCA6A64E930A /* Frameworks */,
 				94D73FC7FD44C0BCBD5C9208 /* Pods */,
 				BACFCC921DDAF89400EFB0BA /* Products */,
-				BACFCCA41DDAF93600EFB0BA /* Source */,
 				BACFCC931DDAF89400EFB0BA /* Swifty-PostgreSQL */,
 				BACFCCAA1DDAF95800EFB0BA /* Swifty-PostgreSQLTests */,
 			);
@@ -250,6 +258,7 @@
 		BACFCCAA1DDAF95800EFB0BA /* Swifty-PostgreSQLTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA3F02CF1E6939B300D070AC /* TableSpec.swift */,
 				BACE53701E646EB000B4135E /* ConnectionSpec.swift */,
 				BACE53721E646EB000B4135E /* Info.plist */,
 				BACE53711E646EB000B4135E /* DatabaseSpec.swift */,
@@ -436,7 +445,9 @@
 				BACFCCC11DDAFD9F00EFB0BA /* ConnectionParam.swift in Sources */,
 				BACFCCBB1DDAFAF600EFB0BA /* Query.swift in Sources */,
 				BA1999EA1DDC508000296441 /* ResultStatus.swift in Sources */,
+				BA3F02CC1E6933C600D070AC /* PaginationQuery.swift in Sources */,
 				BAEE57611E482F6100EC61E7 /* Column.swift in Sources */,
+				BA3F02CE1E6934CF00D070AC /* QueryFactory.swift in Sources */,
 				BACFCCB71DDAFAE000EFB0BA /* QueryResult.swift in Sources */,
 				BA1999E81DDC412D00296441 /* Parameter.swift in Sources */,
 				BA8FB3121E473ABC004D48F5 /* UUID+Short.swift in Sources */,
@@ -465,6 +476,7 @@
 				BACE53781E646EB000B4135E /* QueryResultSpec.swift in Sources */,
 				BACE53761E646EB000B4135E /* DatabaseSpec.swift in Sources */,
 				BACE53791E646EB000B4135E /* QuerySpec.swift in Sources */,
+				BA3F02D01E6939B300D070AC /* TableSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +613,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe.swifty.postgresql;
 				PRODUCT_NAME = SwiftyPostgreSQL;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "\"-DDEBUG\"";
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Source";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;

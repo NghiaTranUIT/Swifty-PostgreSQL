@@ -71,6 +71,12 @@ open class QueryResult {
     }()
     
     //
+    // MARK: - Pagination
+    var isHaveNextPage: Bool {
+        return false
+    }
+    
+    //
     // MARK: - Init
     public init(_ resultPtr: OpaquePointer?) {
         self.resultPtr = resultPtr
@@ -138,6 +144,15 @@ extension QueryResult {
             let typeId = PQftype(resultPtr, i)
             let type = ColumnType.build(rawValue: typeId)
             types.append(type)
+            
+            // Debug
+            #if DEBUG
+                if type == .unsupport {
+                    let name = self.columnsName[Int(i)]
+                    Logger.error("Unsupport name \(name), oid = \(typeId)")
+                }
+            #endif
+
         }
         
         return types

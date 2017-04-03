@@ -62,12 +62,12 @@ extension Connection {
     /// Fetch all table
     fileprivate func fetchAllTables() -> [Table] {
         
-        let query: Query = "SELECT * FROM information_schema.tables WHERE table_schema='public'"
+        let query: Query = QueryFactory.queryGetAllPublicTable()
         let result = self.execute(query: query)
         
         // Init
         let tables: [Table] = result.rows.map { (row) -> Table in
-            return Table(resultRow: row)
+            return Table(connection: self, resultRow: row)
         }
         
         return tables
