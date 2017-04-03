@@ -18,6 +18,15 @@
 		BA1999EC1DDC673400296441 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1999EB1DDC673400296441 /* Row.swift */; };
 		BA3F02CC1E6933C600D070AC /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CB1E6933C600D070AC /* PaginationQuery.swift */; };
 		BA3F02CE1E6934CF00D070AC /* QueryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CD1E6934CF00D070AC /* QueryFactory.swift */; };
+		BA8756441E92445F00FCDFB1 /* SwiftyPostgreSQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACFCC911DDAF89400EFB0BA /* SwiftyPostgreSQL.framework */; };
+		BA87564A1E92447100FCDFB1 /* TableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F02CF1E6939B300D070AC /* TableSpec.swift */; };
+		BA87564B1E92447100FCDFB1 /* ConnectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53701E646EB000B4135E /* ConnectionSpec.swift */; };
+		BA87564C1E92447100FCDFB1 /* DatabaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53711E646EB000B4135E /* DatabaseSpec.swift */; };
+		BA87564D1E92447100FCDFB1 /* QueryResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53731E646EB000B4135E /* QueryResultSpec.swift */; };
+		BA87564E1E92447100FCDFB1 /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53741E646EB000B4135E /* QuerySpec.swift */; };
+		BA8756541E92474C00FCDFB1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA87564F1E9246B000FCDFB1 /* Quick.framework */; };
+		BA8756551E92474E00FCDFB1 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8756511E9246B200FCDFB1 /* Nimble.framework */; };
+		BA8756571E92479000FCDFB1 /* ParamConnection+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE537A1E646EB800B4135E /* ParamConnection+Helper.swift */; };
 		BA8FB3121E473ABC004D48F5 /* UUID+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */; };
 		BAA8ED901DDB1967006E4E33 /* ConnectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */; };
 		BABDF8991E331B4F006603BA /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDF8981E331B4F006603BA /* Field.swift */; };
@@ -31,6 +40,16 @@
 		BAEE57611E482F6100EC61E7 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57601E482F6100EC61E7 /* Column.swift */; };
 		BAEE57631E48349A00EC61E7 /* ColumnTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE57621E48349A00EC61E7 /* ColumnTypeProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA8756451E92445F00FCDFB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BACFCC881DDAF89400EFB0BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BACFCC901DDAF89400EFB0BA;
+			remoteInfo = "Swifty-PostgreSQL";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0D419564E139F6C53654D1D5 /* Pods-Swifty-PostgreSQLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty-PostgreSQLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty-PostgreSQLTests/Pods-Swifty-PostgreSQLTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,14 +69,17 @@
 		BA2E0C8F1E66AC92001F899C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		BA3F02CB1E6933C600D070AC /* PaginationQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationQuery.swift; sourceTree = "<group>"; };
 		BA3F02CD1E6934CF00D070AC /* QueryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryFactory.swift; sourceTree = "<group>"; };
-		BA3F02CF1E6939B300D070AC /* TableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSpec.swift; sourceTree = "<group>"; };
+		BA3F02CF1E6939B300D070AC /* TableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSpec.swift; path = "../Swifty-PostgreSQLTests/TableSpec.swift"; sourceTree = "<group>"; };
+		BA87563F1E92445F00FCDFB1 /* SwiftyPostgreSQLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyPostgreSQLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8756431E92445F00FCDFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA87564F1E9246B000FCDFB1 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		BA8756511E9246B200FCDFB1 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		BA8FB3111E473ABC004D48F5 /* UUID+Short.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UUID+Short.swift"; sourceTree = "<group>"; };
 		BAA8ED8F1DDB1967006E4E33 /* ConnectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionResult.swift; sourceTree = "<group>"; };
 		BABDF8981E331B4F006603BA /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		BABDF89A1E332C70006603BA /* ColumnType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnType.swift; sourceTree = "<group>"; };
 		BACE53701E646EB000B4135E /* ConnectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionSpec.swift; path = "Swifty-PostgreSQLTests/ConnectionSpec.swift"; sourceTree = SOURCE_ROOT; };
 		BACE53711E646EB000B4135E /* DatabaseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseSpec.swift; path = "Swifty-PostgreSQLTests/DatabaseSpec.swift"; sourceTree = SOURCE_ROOT; };
-		BACE53721E646EB000B4135E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Swifty-PostgreSQLTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		BACE53731E646EB000B4135E /* QueryResultSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryResultSpec.swift; path = "Swifty-PostgreSQLTests/QueryResultSpec.swift"; sourceTree = SOURCE_ROOT; };
 		BACE53741E646EB000B4135E /* QuerySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuerySpec.swift; path = "Swifty-PostgreSQLTests/QuerySpec.swift"; sourceTree = SOURCE_ROOT; };
 		BACE537A1E646EB800B4135E /* ParamConnection+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ParamConnection+Helper.swift"; path = "Swifty-PostgreSQLTests/Helper/ParamConnection+Helper.swift"; sourceTree = SOURCE_ROOT; };
@@ -74,6 +96,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA87563C1E92445F00FCDFB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8756441E92445F00FCDFB1 /* SwiftyPostgreSQL.framework in Frameworks */,
+				BA8756551E92474E00FCDFB1 /* Nimble.framework in Frameworks */,
+				BA8756541E92474C00FCDFB1 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BACFCC8D1DDAF89400EFB0BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,7 +171,8 @@
 			children = (
 				BACE537A1E646EB800B4135E /* ParamConnection+Helper.swift */,
 			);
-			path = Helper;
+			name = Helper;
+			path = "../Swifty-PostgreSQLTests/Helper";
 			sourceTree = "<group>";
 		};
 		BA1999ED1DDC676400296441 /* Result */ = {
@@ -181,15 +214,29 @@
 			name = libpq;
 			sourceTree = "<group>";
 		};
+		BA8756401E92445F00FCDFB1 /* SwiftyPostgreSQLTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA1999A61DDB4E3A00296441 /* Helper */,
+				BA3F02CF1E6939B300D070AC /* TableSpec.swift */,
+				BACE53701E646EB000B4135E /* ConnectionSpec.swift */,
+				BACE53711E646EB000B4135E /* DatabaseSpec.swift */,
+				BACE53731E646EB000B4135E /* QueryResultSpec.swift */,
+				BACE53741E646EB000B4135E /* QuerySpec.swift */,
+				BA8756431E92445F00FCDFB1 /* Info.plist */,
+			);
+			path = SwiftyPostgreSQLTests;
+			sourceTree = "<group>";
+		};
 		BACFCC871DDAF89400EFB0BA = {
 			isa = PBXGroup;
 			children = (
 				BACFCCA41DDAF93600EFB0BA /* Source */,
+				BA8756401E92445F00FCDFB1 /* SwiftyPostgreSQLTests */,
 				CDB205A642EFDCA6A64E930A /* Frameworks */,
 				94D73FC7FD44C0BCBD5C9208 /* Pods */,
 				BACFCC921DDAF89400EFB0BA /* Products */,
 				BACFCC931DDAF89400EFB0BA /* Swifty-PostgreSQL */,
-				BACFCCAA1DDAF95800EFB0BA /* Swifty-PostgreSQLTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				BACFCC911DDAF89400EFB0BA /* SwiftyPostgreSQL.framework */,
+				BA87563F1E92445F00FCDFB1 /* SwiftyPostgreSQLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,23 +274,11 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		BACFCCAA1DDAF95800EFB0BA /* Swifty-PostgreSQLTests */ = {
-			isa = PBXGroup;
-			children = (
-				BA3F02CF1E6939B300D070AC /* TableSpec.swift */,
-				BACE53701E646EB000B4135E /* ConnectionSpec.swift */,
-				BACE53721E646EB000B4135E /* Info.plist */,
-				BACE53711E646EB000B4135E /* DatabaseSpec.swift */,
-				BACE53731E646EB000B4135E /* QueryResultSpec.swift */,
-				BACE53741E646EB000B4135E /* QuerySpec.swift */,
-				BA1999A61DDB4E3A00296441 /* Helper */,
-			);
-			path = "Swifty-PostgreSQLTests";
-			sourceTree = "<group>";
-		};
 		CDB205A642EFDCA6A64E930A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA8756511E9246B200FCDFB1 /* Nimble.framework */,
+				BA87564F1E9246B000FCDFB1 /* Quick.framework */,
 				5254B8593BA7325863F279C4 /* Pods_Swifty_PostgreSQLTests.framework */,
 			);
 			name = Frameworks;
@@ -262,6 +298,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BA87563E1E92445F00FCDFB1 /* SwiftyPostgreSQLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8756471E92445F00FCDFB1 /* Build configuration list for PBXNativeTarget "SwiftyPostgreSQLTests" */;
+			buildPhases = (
+				BA87563B1E92445F00FCDFB1 /* Sources */,
+				BA87563C1E92445F00FCDFB1 /* Frameworks */,
+				BA87563D1E92445F00FCDFB1 /* Resources */,
+				BA8756561E92475A00FCDFB1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA8756461E92445F00FCDFB1 /* PBXTargetDependency */,
+			);
+			name = SwiftyPostgreSQLTests;
+			productName = SwiftyPostgreSQLTests;
+			productReference = BA87563F1E92445F00FCDFB1 /* SwiftyPostgreSQLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BACFCC901DDAF89400EFB0BA /* Swifty-PostgreSQL */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BACFCC991DDAF89400EFB0BA /* Build configuration list for PBXNativeTarget "Swifty-PostgreSQL" */;
@@ -286,10 +341,15 @@
 		BACFCC881DDAF89400EFB0BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Titan;
 				TargetAttributes = {
+					BA87563E1E92445F00FCDFB1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D54Y88Y9CY;
+						ProvisioningStyle = Automatic;
+					};
 					BACFCC901DDAF89400EFB0BA = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = D54Y88Y9CY;
@@ -311,11 +371,19 @@
 			projectRoot = "";
 			targets = (
 				BACFCC901DDAF89400EFB0BA /* Swifty-PostgreSQL */,
+				BA87563E1E92445F00FCDFB1 /* SwiftyPostgreSQLTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA87563D1E92445F00FCDFB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BACFCC8F1DDAF89400EFB0BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,7 +393,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BA8756561E92475A00FCDFB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		BA87563B1E92445F00FCDFB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA87564B1E92447100FCDFB1 /* ConnectionSpec.swift in Sources */,
+				BA8756571E92479000FCDFB1 /* ParamConnection+Helper.swift in Sources */,
+				BA87564E1E92447100FCDFB1 /* QuerySpec.swift in Sources */,
+				BA87564C1E92447100FCDFB1 /* DatabaseSpec.swift in Sources */,
+				BA87564D1E92447100FCDFB1 /* QueryResultSpec.swift in Sources */,
+				BA87564A1E92447100FCDFB1 /* TableSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BACFCC8C1DDAF89400EFB0BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,7 +456,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BA8756461E92445F00FCDFB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BACFCC901DDAF89400EFB0BA /* Swifty-PostgreSQL */;
+			targetProxy = BA8756451E92445F00FCDFB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BA8756481E92445F00FCDFB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D54Y88Y9CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SwiftyPostgreSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fe.nghiatran.SwiftyPostgreSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BA8756491E92445F00FCDFB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D54Y88Y9CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SwiftyPostgreSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fe.nghiatran.SwiftyPostgreSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		BACFCC971DDAF89400EFB0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,6 +614,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Source",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Swifty-PostgreSQL/Info.plist";
@@ -502,6 +646,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Source",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Swifty-PostgreSQL/Info.plist";
@@ -519,6 +664,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA8756471E92445F00FCDFB1 /* Build configuration list for PBXNativeTarget "SwiftyPostgreSQLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8756481E92445F00FCDFB1 /* Debug */,
+				BA8756491E92445F00FCDFB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BACFCC8B1DDAF89400EFB0BA /* Build configuration list for PBXProject "Swifty-PostgreSQL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
