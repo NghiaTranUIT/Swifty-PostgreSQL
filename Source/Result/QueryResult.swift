@@ -85,6 +85,7 @@ open class QueryResult {
     }
     
     deinit {
+        Logger.error("QueryResult Deinit")
         PQclear(self.resultPtr)
     }
 }
