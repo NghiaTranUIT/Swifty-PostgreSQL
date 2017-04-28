@@ -14,19 +14,13 @@ open class Column: ColumnTypeProtocol {
     //
     // MARK: - Variable
     fileprivate var _colName: String!
-    public var colName: String {
-        return _colName
-    }
+    public var colName: String {return _colName}
     
     fileprivate var _colIndex: Int!
-    public var colIndex: Int {
-        return _colIndex
-    }
+    public var colIndex: Int {return _colIndex}
     
     fileprivate var _colType: ColumnType!
-    public var colType: ColumnType {
-        return _colType
-    }
+    public var colType: ColumnType {return _colType}
     
     public lazy var textAlignment: NSTextAlignment = {
         switch self.colType {
@@ -61,10 +55,6 @@ open class Column: ColumnTypeProtocol {
         col._colName = colName
         return col
     }
-    
-    //
-    // MARK: - Public
-    
 }
 
 extension Column: Hashable {

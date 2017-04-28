@@ -31,9 +31,7 @@ open class Field: Presentable {
     /// Intent for presentation in Field cell
     /// We use it to reduce hit performance. Only parse to real data if possible
     fileprivate lazy var _rawData: String = self.parseRawData()
-    public var rawData: String {
-        return self._rawData
-    }
+    public var rawData: String { return self._rawData }
     
     /// Determine if current value is <null>
     /// Store it as NSNull
@@ -71,9 +69,7 @@ extension Field {
     fileprivate func parseRealData() -> Any {
         
         // Is null
-        guard self.isNull == false else {
-            return NSNull()
-        }
+        guard self.isNull == false else { return NSNull() }
         
         // Real data
         let value = self.decoder.decodeRawData(self.rawData, column: self.column)
