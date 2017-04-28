@@ -72,9 +72,7 @@ open class QueryResult {
     
     //
     // MARK: - Pagination
-    var isHaveNextPage: Bool {
-        return false
-    }
+    var isHaveNextPage: Bool { return false }
     
     //
     // MARK: - Init
@@ -85,6 +83,7 @@ open class QueryResult {
     }
     
     deinit {
+        Logger.error("QueryResult Deinit")
         PQclear(self.resultPtr)
     }
 }
@@ -97,53 +96,35 @@ extension QueryResult {
     /// Lazy get Row
     fileprivate func getRows() -> [Row] {
         
-        guard let resultPtr = self.resultPtr else {
-            return []
+        guard let resultPtr = self.resultPtr else { return [] }
+
+        // Map Row
+        return (0..<self.numberOfRows).map { i -> Row in
+            return Row.buildResultRow(atRowIndex: Int32(i),
+                                      columns: self.columns,
+                                      resultPtr: resultPtr)
         }
-        
-        // Rows
-        var rows: [Row] = []
-        rows.reserveCapacity(self.numberOfRows)
-        
-        // Get value
-        for rowIndex in 0..<self.numberOfRows {
-            let row = Row.buildResultRow(atRowIndex: Int32(rowIndex),
-                                            columns: self.columns,
-                                          resultPtr: resultPtr)
-            rows.append(row)
-        }
-        
-        // Return
-        return rows
     }
     
     // Lazy get columns
     fileprivate func getColumns() -> [Column] {
         
-        var cols: [Column] = []
-        for i in 0..<self.columnsName.count {
-            
+        // Map Column
+        return self.columnsName.enumerated().map { (i, element) -> Column in
             let nameCol = self.columnsName[i]
             let colType = self.columnTypes[i]
-            let col = Column(colName: nameCol, colIndex: i, colType: colType)
-            
-            // Add
-            cols.append(col)
+            return Column(colName: nameCol, colIndex: i, colType: colType)
         }
-        return cols
     }
     
     /// Lazy get type of cols
     fileprivate func getTypeOfColIndex() -> [ColumnType] {
         guard let resultPtr = self.resultPtr else {return []}
         
-        var types: [ColumnType] = []
-        types.reserveCapacity(self.numberOfColumns)
-        
-        for i in 0..<Int32(self.numberOfColumns) {
-            let typeId = PQftype(resultPtr, i)
+        // Map Column Type
+        return (0..<self.numberOfColumns).map { (i) -> ColumnType in
+            let typeId = PQftype(resultPtr, Int32(i))
             let type = ColumnType.build(rawValue: typeId)
-            types.append(type)
             
             // Debug
             #if DEBUG
@@ -152,24 +133,16 @@ extension QueryResult {
                     Logger.error("Unsupport name \(name), oid = \(typeId)")
                 }
             #endif
-
+            
+            return type
         }
-        
-        return types
     }
     
     /// Lazy get col name
     fileprivate func getColumnsName() -> [String] {
         guard let resultPtr = self.resultPtr else {return []}
         
-        var cols: [String] = []
-        let count = Int32(self.numberOfColumns)
-        
-        for i in 0..<count {
-            let name = String(cString: PQfname(resultPtr, i))
-            cols.append(name)
-        }
-        
-        return cols
+        // Map
+        return (0..<self.numberOfColumns).map({return String(cString: PQfname(resultPtr, Int32($0)))})
     }
 }

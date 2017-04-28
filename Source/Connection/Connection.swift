@@ -66,10 +66,7 @@ extension Connection {
         let result = self.execute(query: query)
         
         // Init
-        let tables: [Table] = result.rows.map { (row) -> Table in
-            return Table(connection: self, resultRow: row)
-        }
-        
+        let tables = result.rows.map { return Table(connection: self, resultRow: $0) }
         return tables
     }
     

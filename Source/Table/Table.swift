@@ -93,6 +93,10 @@ open class Table {
         self.isTyped = (resultRow.field(with: "is_typed")!.realData as? String) == "YES"
         self.connection = connection
     }
+    
+    deinit {
+        Logger.error("Table Deinit")
+    }
 }
 
 //

@@ -16,11 +16,7 @@ open class Database {
     
     /// Connections pool
     fileprivate var _connections: [Connection] = []
-    public var connections: [Connection] {
-        get {
-            return self._connections
-        }
-    }
+    public var connections: [Connection] { return self._connections }
     
     //
     // MARK: - Init

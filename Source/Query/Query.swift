@@ -15,7 +15,6 @@ public enum QueryResultFormat: Int32 {
     case binary = 1
 }
 
-
 /// Represent for Query string
 public struct Query {
     
@@ -25,37 +24,22 @@ public struct Query {
     fileprivate let param: Parameter!
     
     /// Param Count
-    public var paramCount: Int32 {
-        get { return self.param.paramCount}
-    }
+    public var paramCount: Int32 { return self.param.paramCount }
     
     /// Param type
-    public var paramType: UnsafePointer<Oid>? {
-        get {return self.param.paramType}
-    }
+    public var paramType: UnsafePointer<Oid>? { return self.param.paramType }
     
     /// Param Value
-    public var paramValue: UnsafePointer<UnsafePointer<Int8>?> {
-        get {
-            return self.param.paramValue
-        }
-    }
+    public var paramValue: UnsafePointer<UnsafePointer<Int8>?> { return self.param.paramValue }
     
     // Param Length
-    public var paramLength: UnsafePointer<Int32>? {
-        get { return self.param.paramLength }
-    }
+    public var paramLength: UnsafePointer<Int32>? { return self.param.paramLength }
     
     // Param format
-    public var paramFormat: UnsafePointer<Int32>? {
-        get { return self.param.paramFormat }
-    }
+    public var paramFormat: UnsafePointer<Int32>? { return self.param.paramFormat }
     
     /// Result format
-    public var resultFormat: QueryResultFormat {
-        get {return .text}
-    }
-
+    public var resultFormat: QueryResultFormat { return .text }
 }
 
 //

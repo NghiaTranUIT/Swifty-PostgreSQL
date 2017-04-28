@@ -21,9 +21,7 @@ public struct ConnectionResult: Error {
     public var connection: Connection? = nil
     
     /// Default init
-    init() {
-        
-    }
+    init() {}
     
     /// Init with connection Pointer
     init(connectionPtr: OpaquePointer?, connectionParam: ConnectionParam) {
@@ -38,6 +36,6 @@ public struct ConnectionResult: Error {
         }
     }
     
-    public static var unknowStatus: ConnectionResult {get{return ConnectionResult()}}
+    public static var unknowStatus: ConnectionResult { return ConnectionResult() }
 }
 
