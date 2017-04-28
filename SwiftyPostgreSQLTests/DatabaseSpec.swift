@@ -32,7 +32,20 @@ class DatabaseSpec: QuickSpec {
                     
                     let result = database.connectDatabase(withParam: validParam)
                     expect(result.connection).toNot(beNil())
+                    
+                    
+                    if result.status != ConnectionStatus.CONNECTION_OK {
+                        
+                        assert(false, "Look like you forgot to configuration your database")
+                        
+                        /*
+                         Please navigate to ConnectionParam.validConnectionParam
+                         and setup your database like that
+                         */
+                    }
+                    
                     expect(result.status) == ConnectionStatus.CONNECTION_OK
+
                 })
             })
             
