@@ -54,6 +54,16 @@ class TableSpec: QuickSpec {
                     expect(primaryCol.colName) == "id"
                     expect(userTable.primaryKey) == "id"
                 })
+                
+                it("Total Row", closure: { 
+                    let totalRows = userTable!.totalRows
+                    expect(totalRows) == 32458
+                })
+                
+                it("Estimate Row", closure: { 
+                    let totalRows = userTable!.estimateRows
+                    expect(totalRows) > 0
+                })
             })
         }
     }

@@ -66,6 +66,12 @@ open class Table {
     // Primary Column
     public lazy var primaryColumn: Column = self.getPrimaryColumn()
     
+    // Total Row
+    public lazy var totalRows: Int = self.getTotalRows()
+    
+    // Estimate row
+    public lazy var estimateRows: Int = self.getEstimateRows()
+    
     //
     // MARK: - Init
     init(connection: Connection, tableCatalog: String, tableSchema: String, tableName: String, tableType: String, isInsertableInto: Bool, isTyped: Bool) {
@@ -123,6 +129,29 @@ extension Table {
         let row = result.rows.first!
         let primaryCol = Column(colName: row.field(with: column)!.rawData, colIndex: 0, colType: column.colType)
         return primaryCol
+    }
+    
+    fileprivate func getTotalRows() -> Int {
+        
+        guard let connection = self.connection else {
+            fatalError("[getPrimaryColumn]: Connection was closed.")
+        }
+        
+        // Query
+        let query = QueryFactory.queryTotalRow(with: self)
+        let result = connection.execute(query: query)
+        return Int(result.rows.first!.field(with: "count")!.rawData)!
+    }
+    
+    fileprivate func getEstimateRows() -> Int {
+        guard let connection = self.connection else {
+            fatalError("[getPrimaryColumn]: Connection was closed.")
+        }
+        
+        // Query
+        let query = QueryFactory.queryEstimateRows(with: self)
+        let result = connection.execute(query: query)
+        return Int(result.rows.first!.field(with: "estimate")!.rawData)!
     }
 }
 

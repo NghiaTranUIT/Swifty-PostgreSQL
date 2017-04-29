@@ -27,4 +27,17 @@ struct QueryFactory {
         let query: Query = "SELECT * FROM information_schema.tables WHERE table_schema='public'"
         return query
     }
+    
+    // Total Count
+    static func queryTotalRow(with table: Table) -> Query {
+        let tableName = table.tableName
+        let rawQuery = "SELECT Count(*) FROM \(tableName!)"
+        return Query(stringLiteral: rawQuery)
+    }
+    
+    // Estimate count
+    static func queryEstimateRows(with table: Table) -> Query {
+        let rawQuery = "SELECT reltuples::bigint AS estimate FROM   pg_class WHERE  oid = \'\(table.tableName!)\'::regclass;"
+        return Query(stringLiteral: rawQuery)
+    }
 }
